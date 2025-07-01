@@ -1,0 +1,84 @@
+\documentclass[12pt,a4paper]{report}
+
+% ---- Packages essentiels ----
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{tocbibind}
+\usepackage{hyperref}
+
+% ---- Packages utiles pour le contenu enrichi ----
+\usepackage{graphicx}        % Gestion des images
+\usepackage{listings}        % Affichage de code source
+\usepackage{xcolor}          % Couleurs
+\usepackage{caption}         % Légendes améliorées
+\usepackage{float}           % Positionnement des flottants
+\usepackage{tikz}            % Dessins vectoriels
+\usetikzlibrary{positioning} % Librairie pour TikZ
+
+% ---- Style personnalisé ----
+\usepackage{style/custom}
+
+% ---- Bibliographie ----
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\addbibresource{sections/06_bibliographie.bib}
+
+% ---- Glossaire et acronymes ----
+\usepackage[acronym]{glossaries}
+\makeglossaries
+
+% ---- Marges ----
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+
+% ---- Configuration listings (code source) ----
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{gray}\itshape,
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny,
+    stepnumber=1,
+    breaklines=true,
+    frame=single,
+    captionpos=b
+}
+
+% ---- Footer personnalisé ----
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Reset headers and footers
+\fancyfoot[L]{Projet Nom – Equipe Nom} % Gauche
+\fancyfoot[C]{}                            % Centre vide
+\fancyfoot[R]{\thepage}                   % Droite : numéro de page
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+\begin{document}
+
+% ---- Page de Garde ----
+\input{sections/00_page_de_garde}
+
+% ---- Table des Matières ----
+\tableofcontents
+\newpage
+
+% ---- Corps du document ----
+\input{sections/01_contexte_et_but_du_projet.tex}
+\input{sections/02_cahier_des_charges.tex}
+\input{sections/03_annexes.tex}
+\input{sections/04_glossaire.tex}
+\input{sections/05_acronymes.tex}
+
+% ---- Glossaires ----
+\printglossary[title=Glossaire, toctitle=Glossaire]
+\printglossary[type=\acronymtype, title=Liste des acronymes, toctitle=Liste des acronymes]
+
+% ---- Bibliographie ----
+\printbibliography[title={Bibliographie}]
+
+\end{document}

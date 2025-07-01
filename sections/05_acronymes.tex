@@ -1,0 +1,34 @@
+\chapter*{Liste des acronymes}
+\addcontentsline{toc}{chapter}{Liste des acronymes}
+
+% ----------------------------------------------------------------
+% 📌 À quoi sert cette section ?
+% ----------------------------------------------------------------
+% Cette section liste tous les acronymes utilisés dans le document, avec leur signification complète.
+% Cela améliore la compréhension du document par un public large, notamment non technique.
+
+% ----------------------------------------------------------------
+% 🧭 Comment utiliser les acronymes dans LaTeX ?
+% ----------------------------------------------------------------
+% ➤ Déclarez un acronyme avec \newacronym
+% ➤ Utilisez l’acronyme dans le texte avec \gls{nom}
+%     - La première apparition affichera la forme complète suivie de l’acronyme entre parenthèses
+%     - Les suivantes n’afficheront que l’acronyme
+%
+% Exemple dans un fichier .tex :
+% \gls{api} est un standard de communication entre logiciels.
+
+% ----------------------------------------------------------------
+% 🧾 Exemple de déclaration d’acronyme :
+% ----------------------------------------------------------------
+
+\newacronym{api}{API}{Application Programming Interface}
+\newacronym{ux}{UX}{User Experience}
+\newacronym{ci}{CI}{Continuous Integration}
+
+% ----------------------------------------------------------------
+% ✍️ À vous de jouer :
+% ----------------------------------------------------------------
+% ➤ Dupliquez les lignes \newacronym pour chaque acronyme utilisé.
+% ➤ Utilisez \gls{...} dans le corps du texte pour les activer automatiquement.
+

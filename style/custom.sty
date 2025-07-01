@@ -1,0 +1,25 @@
+% ============================
+% Fichier custom.sty
+% ============================
+
+% Couleur principale (violet SUPINFO)
+\usepackage{xcolor}
+\definecolor{mainviolet}{RGB}{85, 37, 130}
+\colorlet{sectioncolor}{mainviolet}
+
+% Police moderne sans-serif
+\usepackage[sfdefault]{roboto}
+
+% Personnalisation des titres de section
+\usepackage{sectsty}
+\sectionfont{\color{sectioncolor}}
+\subsectionfont{\color{sectioncolor}}
+
+% Pour la page de garde
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lipsum} % Pour exemples
+
+% Pour pleine page couleur
+\usepackage{pagecolor}
